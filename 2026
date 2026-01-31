@@ -1,0 +1,723 @@
+AWS Certified Cloud Practitioner (ACCP) Exam Notes (2026 Full Update)
+
+These are notes regarding the ACCP exam which were gradually completed while studying the exam objectives, now fully updated for the CLF-C02 standards.
+
+Who should take this exam?
+
+
+
+The AWS Certified Cloud Practitioner (CLF-C02) exam is intended for individuals
+
+
+
+who can effectively demonstrate an overall knowledge of the AWS Cloud
+
+
+
+independent of a specific job role.
+
+You can find every updated information in this link which is the official and reputable information.
+
+The following table lists the main content domains and their weightings.
+
+
+
+<div align="center">
+
+Domain
+
+% of Exam
+
+Domain 1: Cloud Concepts
+
+24%
+
+Domain 2: Security and Compliance
+
+30%
+
+Domain 3: Cloud Technology and Services
+
+34%
+
+Domain 4: Billing, Pricing and Support
+
+12%
+
+Total
+
+100%
+
+</div>
+
+Also you can download the official exam guide.
+
+Another profitable resource is the whitepaper Overview of Amazon Web Services.
+
+Table of contents
+
+Amazon S3
+
+Six advantages of Amazon Cloud (Benefits)
+
+AWS Compute Optimizer
+
+Amazon EBS volumes types
+
+Amazon Elastic Load Balancer (ELB)
+
+Amazon Load Balancers
+
+AWS Network Access Control List (ACL)
+
+AWS Security Groups
+
+AWS Internet Gateway
+
+AWS Scalability
+
+Amazon Simple Notification Service (SNS)
+
+Amazon Simple Queue Service (SQS)
+
+Amazon Simple Email Service (SES)
+
+AWS Inspector
+
+AWS Trusted Advisor
+
+AWS Health Dashboard
+
+AWS X-Ray
+
+AWS Pricing Calculator
+
+Amazon Elastic Block Store (EBS)
+
+Amazon SageMaker
+
+Amazon Kinesis
+
+Cloud Computing
+
+AWS CloudFormation
+
+AWS Elastic Beanstalk
+
+AWS Lambda
+
+AWS Well-Architected Framework
+
+AWS WAF
+
+AWS AD Connector
+
+AWS Simple AD
+
+Amazon Elastic Kubernetes Service (EKS)
+
+Amazon Elastic Container Service (ECS)
+
+Amazon Elastic Container Registry (ECR)
+
+Virtual Private Gateway
+
+VPC peering connection
+
+AWS Site-to-Site VPN
+
+AWS App Mesh
+
+AWS support plans
+
+Amazon IAM
+
+Amazon Cognito
+
+AWS Organizations
+
+Popular HTTP code
+
+AWS CloudTrail
+
+Amazon CloudWatch
+
+Amazon DynamoDB
+
+AWS Database SQL type
+
+AWS Device Farm
+
+AWS Config
+
+AWS Shared Responsibility Model
+
+Amazon RDS
+
+AWS Auto Scaling Group
+
+AWS Auto Scaling
+
+AWS CloudHSM
+
+AWS Glacier
+
+AWS Storage Gateway
+
+AWS Step Functions
+
+Amazon Simple Workflow Service (SWF)
+
+Amazon Security Token Service (STS)
+
+AWS Server Migration Service (SMS)
+
+Amazon DevPay
+
+Amazon OpenSearch Service
+
+Amazon Athena
+
+Amazon QuickSight
+
+Amazon CodeStar
+
+Amazon Cloud9
+
+Amazon CodeDeploy
+
+Amazon Route 53
+
+Amazon CloudFront
+
+Amazon Lightsail
+
+Amazon EC2
+
+AWS pricing policies
+
+AWS Cost Explorer
+
+AWS Cost Anomaly Detection
+
+Amazon Elastic Transcoder
+
+AWS Glue
+
+AWS Artifact
+
+AWS Shield
+
+AWS Service Catalog
+
+AWS Managed Services
+
+Amazon Machine Image (AMI)
+
+Amazon S3 Transfer Acceleration
+
+Amazon Neptune
+
+AWS Direct Connect
+
+AWS Snow family
+
+Amazon Comprehend
+
+Amazon Resource Names (ARNs)
+
+AWS IoT Core
+
+AWS Fargate
+
+Amazon Detective
+
+Amazon Global Accelerator
+
+AWS Data Sync
+
+AWS CodePipeline 
+
+Amazon GuardDuty
+
+Amazon Macie
+
+AWS OpsWorks
+
+AWS Partner Network (APN)
+
+Five design principles for performance efficiency in the cloud
+
+Five design principles for cost optimization in the cloud
+
+Five design principles for reliability in the cloud
+
+Six design principles for security in the cloud
+
+Five categories of Trusted Advisor
+
+Six pillars of the AWS Well-Architected Framework
+
+Six perspectives of the AWS Cloud Adoption Framework
+
+Four cloud transformation phases of the AWS Cloud Adoption Framework
+
+Six Rs strategies for migration
+
+Geographical Services
+
+Notes
+
+Appendices
+
+Amazon EC2 Instances
+
+AWS CAF (Cloud Adoption Framework)
+
+AWS Well-Architected Framework
+
+Amazon S3
+
+CRR (Cross-region replication): enables automatic, asynchronous copying of objects across buckets in different AWS Regions.
+
+Durability: 99.999999999% (11 9's).
+
+Consistency: Strong consistency for all operations (PUTs/DELETEs).
+
+Bucket names rules:
+
+Names must be unique across all of AWS.
+
+Names must be 3 to 63 characters in length.
+
+Names can only contain lowercase letters, numbers and hyphens.
+
+Amazon S3 storage classes (2026):
+
+S3 Standard -> Frequently accessed data.
+
+S3 Standard-IA -> Infrequent access, rapid retrieval.
+
+S3 One Zone-IA -> Cost-effective, single AZ (less durable).
+
+S3 Intelligent-Tiering -> Unknown/changing access patterns (Auto-tiering).
+
+S3 Glacier Instant Retrieval -> Millisecond retrieval for rare access.
+
+S3 Glacier Flexible Retrieval -> Minutes to hours.
+
+S3 Glacier Deep Archive -> Lowest cost, 12-48 hours.
+
+Multipart upload can be used to speed up uploads to S3.
+
+"MFA delete" adds a layer of additional security to prevent accidental deletion.
+
+Amazon S3 objects consist of: Key, Value, Version ID, Metadata.
+
+Object lifecycle management: Automated rules to transfer objects between classes or expire them.
+
+Standard-IA and One Zone-IA both have a minimum storage duration charge of 30 days.
+
+Six advantages of Amazon Cloud (Benefits)
+
+Trade capital expense (CAPEX) for variable expense (OPEX).
+
+Benefit from massive economies of scale.
+
+Stop guessing about capacity.
+
+Increase speed and agility.
+
+Stop spending money running and maintaining data centres.
+
+Go global in minutes.
+
+AWS Compute Optimizer
+
+It helps avoid over/underprovisioning based on utilization data for:
+
+Amazon Elastic Compute Cloud (EC2) instance types.
+
+Amazon Elastic Block Store (EBS) volumes.
+
+Amazon Elastic Container Service (ECS) services on AWS Fargate.
+
+AWS Lambda functions.
+
+Amazon EBS volumes types
+
+General purpose (gp3 / gp2) (SSD): Balanced price/performance. gp3 is the latest generation.
+
+Provisioned IOPS (io2 / io1) (SSD): Highest performance for IOPS-intensive apps.
+
+Cold HDD (sc1): Lowest cost, throughput-oriented for infrequent data.
+
+Throughput Optimized (st1): Fast throughput for big data/streaming.
+
+Amazon Elastic Load Balancer (ELB)
+
+Distributes incoming traffic across multiple targets (EC2) in multiple Availability Zones.
+
+ELB Health Check monitors instance health.
+
+A listener checks for connection requests using the protocol and port you configure.
+
+Amazon Load Balancers
+
+Application Load Balancers (ALB): Layer 7 (HTTP/HTTPS).
+
+Network Load Balancers (NLB): Layer 4 (TCP/UDP/TLS). Ultra-low latency.
+
+Gateway Load Balancers (GLB): For deploying 3rd party virtual appliances.
+
+Classic Load Balancers (CLB): Legacy, Layer 4 & 7.
+
+AWS Network Access Control List (ACL)
+
+Stateless.
+
+Operates at VPC subnet level.
+
+Supports both Allow and Deny rules.
+
+AWS Security Groups
+
+Stateful firewalls.
+
+Operates on EC2 instance level.
+
+Only Allow rules (no explicit deny).
+
+AWS Internet Gateway
+
+Allows public traffic to access VPC resources.
+
+Attached at the VPC level.
+
+AWS Scalability
+
+Scaling vertically: Increasing instance size (CPU, RAM).
+
+Scaling horizontally: Adding more instances (Auto Scaling).
+
+Amazon Simple Notification Service (SNS)
+
+Pub/Sub messaging. Sends notifications from the cloud.
+
+Supports HTTP/HTTPS, Email, SQS, and SMS.
+
+Integrates loosely-coupled, distributed applications.
+
+Amazon Simple Queue Service (SQS)
+
+Fully managed pull-based message queuing service.
+
+Use case: Decoupling microservices to ensure independence between components.
+
+Ensures persistence of in-flight transactions.
+
+Amazon Simple Email Service (SES)
+
+Scalable service for sending and receiving emails (transactional/marketing).
+
+AWS Inspector
+
+Automated security assessment for EC2 instances and container images for vulnerabilities.
+
+AWS Trusted Advisor
+
+Five categories: Cost optimization, Security, Performance, Service limits, Fault tolerance.
+
+Provides real-time guidance based on AWS best practices.
+
+AWS Health Dashboard
+
+AWS Health Dashboard: (Replaces Personal Health Dashboard) Provides personalized view into performance and availability of AWS services impacting your account.
+
+AWS X-Ray
+
+Helps developers analyze and debug distributed applications (tracing).
+
+AWS Pricing Calculator
+
+(Replaces TCO Calculator) Used to estimate the cost of AWS services for your specific use cases.
+
+Amazon Elastic Block Store (EBS)
+
+Snapshot backups are stored on Amazon S3.
+
+EBS volumes must be in the same AZ as the instances they are attached to.
+
+Use Amazon DLM (Data Lifecycle Manager) to automate snapshots.
+
+Charged for provisioned capacity per month and provisioned IOPS.
+
+Amazon SageMaker
+
+Build, train, and deploy machine learning models at scale.
+
+Amazon Kinesis
+
+For processing or analyzing streaming data in real time (Video, Data, Analytics).
+
+Cloud Computing
+
+On-demand delivery of compute, storage, and databases via the internet.
+
+Benefit from massive economies of scale and increased agility.
+
+AWS CloudFormation
+
+Infrastructure as Code (IaC). Declare resources in templates (JSON/YAML).
+
+Change sets: Preview impacts of stack changes before applying.
+
+AWS Elastic Beanstalk
+
+PaaS for the fastest deployment of web applications; manages scaling and health automatically.
+
+AWS Lambda
+
+Serverless compute. Triggered by S3 events, HTTP requests (API Gateway), or SQS queues.
+
+AWS Well-Architected Framework
+
+Operational excellence
+
+Security
+
+Reliability
+
+Performance efficiency
+
+Cost optimization
+
+Sustainability (Added as the 6th pillar in modern standards)
+
+AWS WAF
+
+Web Application Firewall. Blocks common attack patterns like SQL injection and Cross-site scripting.
+
+AWS Shield
+
+Managed DDoS protection service.
+
+Standard: Free, for common attacks.
+
+Advanced: Paid, for sophisticated attacks and 24/7 access to Response Team.
+
+AWS AD Connector
+
+Redirects directory requests to your on-premise Active Directory.
+
+AWS Simple AD
+
+Standalone Active Directory-compatible service (does not connect to on-premise AD).
+
+Amazon Elastic Kubernetes Service (EKS)
+
+(Renamed) Managed Kubernetes service to run Kubernetes without managing the control plane.
+
+Amazon Elastic Container Service (ECS)
+
+Orchestration for Docker containers on EC2 or Fargate.
+
+Amazon Elastic Container Registry (ECR)
+
+Secure hosting for container images.
+
+Virtual Private Gateway
+
+VPN concentrator on the AWS side of a VPN connection.
+
+VPC peering connection
+
+Routing traffic between VPCs using private IP addresses. Works across accounts and regions.
+
+AWS Site-to-Site VPN
+
+Secure connection between your data center and AWS resources.
+
+AWS App Mesh
+
+Application-level networking for microservices.
+
+AWS support plans
+
+Basic: 24/7 customer service, documentation, 7 core Trusted Advisor checks.
+
+Developer: Business hours email support.
+
+Business: 24/7 phone/chat/email. 1-hour response for Production Down.
+
+Enterprise: Includes TAM (Technical Account Manager). 15-minute response for Business Critical Down.
+
+Amazon IAM
+
+Identity and Access Management.
+
+Free to use. Use Least Privilege and MFA.
+
+Supports Identity Federation (SSO).
+
+Amazon Cognito
+
+User sign-up/sign-in for web and mobile apps.
+
+AWS Organizations
+
+Consolidated billing and policy-based management for multiple accounts.
+
+Volume pricing discounts applied across all linked accounts.
+
+Popular HTTP code
+
+200: Success
+
+300: Redirection
+
+400: Client Error
+
+500: Server Error
+
+AWS CloudTrail
+
+Logs all API calls for auditing and compliance. (Who, what, when).
+
+Amazon CloudWatch
+
+Repository for metrics and logs. Monitoring and Alarms.
+
+Amazon DynamoDB
+
+Managed NoSQL database. Schema-less. Data synced across 3 AZs.
+
+AWS Database SQL type
+
+Amazon RDS, Amazon Aurora, Amazon Redshift.
+
+AWS Device Farm
+
+Test apps on real physical devices in the AWS cloud.
+
+AWS Config
+
+Audits and records resource configurations. Evaluates configurations against desired states.
+
+AWS Shared Responsibility Model
+
+AWS: Security OF the cloud (Infrastructure, Hardware, Managed Services).
+
+Customer: Security IN the cloud (Data, OS patching on EC2, IAM, Encryption).
+
+Amazon RDS
+
+Managed Relational Database Service.
+
+Multi-AZ: Synchronous for High Availability.
+
+Read Replicas: Asynchronous for read scalability.
+
+AWS Auto Scaling
+
+Scaling Policy: Simple, Scheduled, Dynamic, or Predictive.
+
+AWS CloudHSM
+
+Dedicated hardware security module in the cloud for cryptographic keys.
+
+AWS Glacier
+
+Retrieve data via Standard (3-5 hr), Expedited (1-5 min), or Bulk (5-12 hr).
+
+AWS Storage Gateway
+
+File Gateway, Volume Gateway (Stored/Cached), Tape Gateway.
+
+Amazon OpenSearch Service
+
+(Replaces Amazon Elasticsearch Service) For operational analytics, logs, and real-time search.
+
+Amazon Athena
+
+Serverless SQL interogation of data in S3.
+
+Amazon QuickSight
+
+Business intelligence (BI) and dashboards.
+
+Amazon Route 53
+
+Global DNS service.
+
+Policies: Simple, Weighted, Latency, Failover, Geolocation, Geoproximity, Multi-value.
+
+Amazon CloudFront
+
+Content Delivery Network (CDN) using Edge Locations to cache content globally.
+
+Amazon Lightsail
+
+Preconfigured VPS (Virtual Private Servers) with compute, storage, and networking.
+
+Amazon EC2 pricing
+
+On-Demand: No commitment.
+
+Spot: Spare capacity for short-term requirements (Interruptible).
+
+Reserved Instances: 1 or 3 year commitment for discount (Standard, Convertible).
+
+Dedicated Hosts: Physical servers dedicated to you.
+
+AWS Cost Explorer / Anomaly Detection
+
+Cost Explorer: View cost charts and forecasts.
+
+Anomaly Detection: Alerts when unexpected spending is detected.
+
+AWS Artifact
+
+Portal for downloading AWS security and compliance reports (PCI, SOC, ISO).
+
+AWS Snow family
+
+Snowcone: 8-14 TB.
+
+Snowball Edge: Petabyte-scale data migration.
+
+Snowmobile: 100 PB shipping container.
+
+Six Rs strategies for migration
+
+Rehosting (Lift-and-shift)
+
+Replatforming (Lift-tinker-and-shift)
+
+Refactoring (Re-architecting)
+
+Repurchasing (SaaS)
+
+Retaining (Keep on-premise)
+
+Retiring (Decommission)
+
+Notes
+
+Loose Coupling: Components are independent; if one fails, others aren't affected.
+
+VPC Wizard Options: Single Public, Public/Private, Public/Private+VPN, Private+VPN.
+
+Stateful (SG): Automatically allows return traffic.
+
+Stateless (NACL): Requires separate rules for inbound and outbound.
+
+Golden Image: AMI snapshot used for consistent resource creation.
+
+Bootstrapping: Running code (User Data) at instance launch.
+
+Shared Responsibility: Customer patches OS on EC2; AWS patches OS on RDS.
+
+Direct Connect: Dedicated private connection (not over internet).
+
+VPN: Encrypted connection over the public internet.
