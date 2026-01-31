@@ -1,15 +1,5 @@
 # AWS Certified Cloud Practitioner (ACCP) Exam Notes
 
-[![Twitter Follow](https://img.shields.io/twitter/follow/geekestan?label=geekestan&style=plastic&logo=twitter&color=blue)](https://twitter.com/geekestan)
-[![GitHub Follow](https://img.shields.io/github/followers/hamidgholami?label=hamidgholami&style=plastic&logo=github&color=green)](https://github.com/hamidgholami)
-[![Linkedin Badge](https://img.shields.io/badge/hamid--gholami-LinkedIn-blue?logo=linkedin)](https://www.linkedin.com/in/hamid-gholami/)
-<!--
-[![Youtube Badge](https://img.shields.io/badge/-geekestan-red?style=plastic&&logo=youtube&message=geekestan&logoColor=white)](https://www.youtube.com/channel/UCBlOVqLEwcvFNG03KDAVTlw)
--->
-[![Twitter Follow](https://img.shields.io/twitter/follow/silversonicaxel?label=silversonicaxel&style=plastic&logo=twitter&color=black)](https://twitter.com/silversonicaxel)
-[![GitHub Follow](https://img.shields.io/github/followers/silversonicaxel?label=silversonicaxel&style=plastic&logo=github&color=green)](https://github.com/silversonicaxel)
-[![Linkedin Badge](https://img.shields.io/badge/alessandrorabitti-LinkedIn-black?logo=linkedin)](https://www.linkedin.com/in/alessandrorabitti/)
-
 
 These are notes regarding ACCP exam which were gradually completed while studying the exam objectives.
 
